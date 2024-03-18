@@ -1,0 +1,54 @@
+
+  
+Kubernetes Tutorial | Run & Deploy Spring Boot Application in K8s Cluster using yaml configuration
+
+https://medium.com/@javatechie/kubernetes-tutorial-run-deploy-spring-boot-application-in-k8s-cluster-using-yaml-configuration-3b079154d232#id_token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjA5YmNmODAyOGUwNjUzN2Q0ZDNhZTRkODRmNWM1YmFiY2YyYzBmMGEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIyMTYyOTYwMzU4MzQtazFrNnFlMDYwczJ0cDJhMmphbTRsamRjbXMwMHN0dGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIyMTYyOTYwMzU4MzQtazFrNnFlMDYwczJ0cDJhMmphbTRsamRjbXMwMHN0dGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDg0Mjg0NzkyOTYxNTg4MTU4NzYiLCJlbWFpbCI6InNpY2VtYWxAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5iZiI6MTcxMDc1NzYzMiwibmFtZSI6IlNpbHZpbyBMaW1laXJhIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0wyQXVFMU90bTlHMzNmT1N5NENXbVNYa0JwMWpVcER1Yk0tNHBhTkpld05Ybz1zOTYtYyIsImdpdmVuX25hbWUiOiJTaWx2aW8iLCJmYW1pbHlfbmFtZSI6IkxpbWVpcmEiLCJsb2NhbGUiOiJwdC1CUiIsImlhdCI6MTcxMDc1NzkzMiwiZXhwIjoxNzEwNzYxNTMyLCJqdGkiOiJkMDQ5YWM2NjAwZDRlN2Q4ZjRhYzUxNjU5YmY5OGRhMzFmNmY4ZmYxIn0.DiWu5-mxXH09aTEAtArrkkKzEvy3JSX66vUDgA9E8ycSnkJNwrh7rXf3HQ6faZjzvmDfw_8j5uHigTfxOS_dwjpNg13THQuKSNcCn2Hs09dvAfhEOqJGyQhoW3CvY2tHOsqzkrx0G85KMbsJ3Omo09JtCJk_OkmQefgGyfTKeNUA6J4oKrnbcw1SxKNNMFyUlHq1X3gGLTr4R50qdJYfOFPwcHGpYydLB4pgMZAGrak-vWJT7MvIBHxEzvittvgA8KOeHMwTweXoRS2BDCHaQpG9f-HjjA4Jyo4tUpbA9_mHqkujsDLJNoLaOw100c0kJGkfzAAp9_tqw4mtaYUtOg
+
+
+Original:
+GitHub link : https://github.com/Java-Techie-jt/springboot-k8s-example
+
+Passos para testar:
+
+sudo apt-get update 
+sudo apt --fix-broken install
+sudo apt-get upgrade -y 
+
+sudo apt install openjdk-17-jre-headless 
+sudo apt install maven 
+
+mvn clean install 
+
+docker build -t springboot-k8s-example:1.0 . 
+
+kubectl apply -f deployment.yaml
+
+kubectl apply -f service.yaml
+http://192.168.49.2:30101/message 
+
+kubectl get nodes -o wide 
+
+minikube ip 
+minikube dashboard 
+
+
+------------------------------------------------------------------------------------------
+
+Como pular testes no maven? -Dmaven.test.skip=true 
+
+
+------------------------------------------------------------------------------------------
+
+
+            docker images # listar imagens
+            
+            kubectl get deployments 
+
+            kubectl get pods 
+
+            kubectl get logs spring-boot-k8s-58...
+
+            kubectl get service | kubectl get svc 
+
+            
+
